@@ -1,27 +1,32 @@
 import mysql.connector
 import time
 from tabulate import tabulate
-import argparse
+
+
+# python dbseeker.py -a mysql-rfam-public.ebi.ac.uk -P 4497 -u rfamro -s test -d Rfam
 
 '''
-Version alpha 0.2
- Changelog:
-    - Whole script rewritten using functions
-    -
-
-Version alpha 0.3
- Changelog:
-    - Cleaned string formatting for results
-    - Printed results now display PRIMARY KEYs
-        * Exexute ' python dbseeker.py -h ' to see the help message *
-
 Version alpha 0.4
  Changelog:
     - Inserted a padding limit for searching string to increase readability
     - Added argument for better parsing
     - Now user can blacklists databases to be excluded from research, OR 
         choose which database to be searched in.
+        
+Version alpha 0.3
+ Changelog:
+    - Cleaned string formatting for results
+    - Printed results now display PRIMARY KEYs
+        * Exexute ' python dbseeker.py -h ' to see the help message *
+        
+Version alpha 0.2
+ Changelog:
+    - Whole script rewritten using functions
+    -
+
 '''
+import argparse
+
 
 SEARCH_PADDING_CHARS = 25
 PREPEND_APPEND_SEARCH_CHARS = "..."
@@ -83,6 +88,7 @@ def row_map(row, search_term):
 
 
 def search_tables(databases, cursor, search_term):
+    total_row_count = 0
     for database in databases:
         cursor.execute(f"USE `{database}`")
         cursor.execute("SHOW TABLES")
@@ -111,7 +117,8 @@ def search_tables(databases, cursor, search_term):
                 if row_count == 0:
                     continue
 
-                print(f"Found {row_count} Results for {table_name} (DB: {database}):\n")
+                total_row_count += row_count
+                print(f"Found {row_count} rows for {table_name} (DB: {database}):\n")
                 print(tabulate(rows, headers=columns, tablefmt="double_grid"))
 
             except mysql.connector.errors.ProgrammingError as error:
@@ -120,6 +127,8 @@ def search_tables(databases, cursor, search_term):
             except Exception as error:
                 print(f"General Error: {error}\n")
                 continue
+
+    return total_row_count
 
 
 def main():
@@ -166,12 +175,11 @@ def main():
 
     print("Databases to search on:", "\n", tabulate([filtered_databases]), "\n", "searching...")
 
-    # search_term = input("Enter a search term: ")
     if len(search_term) < 3:
         print("Search term should be at least 3 characters long.")
         exit(0)
 
-    search_tables(filtered_databases, cursor, search_term)
+    total_row_count = search_tables(filtered_databases, cursor, search_term)
 
     cursor.close()
     connection.close()
@@ -179,6 +187,7 @@ def main():
     end = time.time()
     time_execution = end - start
     print("Execution time:", time_execution, "seconds")
+    print("Total rows found:", total_row_count)
 
 
 if __name__ == "__main__":
