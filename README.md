@@ -3,8 +3,8 @@
 [![Built with Python3](https://img.shields.io/badge/built%20with-Python3-red.svg)](https://www.python.org/) [![PyPI version](https://badge.fury.io/py/dbseeker.svg)](https://badge.fury.io/py/dbseeker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dueclic/dbseeler/blob/master/LICENSE) ![Contributors](https://img.shields.io/github/contributors/dueclic/dbseeker)
 ## Description:
 
-A little but functional script that let you search in several databases for an input string.
-It will print the results in a table format, indicating wich table contains the search term, in wich database, how many rows were found and the time it took to search.
+A little but functional script that lets you search on every database of a MySQL server for an input string.
+It will print the results in a table format, indicating which table contains the search term, in which database, how many rows were found and the time it took to search.
 
 Please note that this project is still in alpha stage, so you may encounter bugs and missing features.
 ## Usage: 
@@ -48,7 +48,7 @@ Since 'argparse' and 'time' should be both included in your python environment y
 - mysql-connector-python
 - tabulate
 
-as refered in the requirements.txt file.
+as referred in the requirements.txt file.
 
 ## Contributors
 
