@@ -1,3 +1,6 @@
 .idea
 .venv
 history.txt
+build
+dist
+dbseeker.egg-info
