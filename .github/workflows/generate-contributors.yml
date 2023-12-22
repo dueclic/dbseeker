@@ -1,8 +1,9 @@
 name: Generate contributors
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
 
 permissions:
   contents: read
