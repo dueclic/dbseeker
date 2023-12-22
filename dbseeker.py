@@ -1,31 +1,7 @@
 import mysql.connector
-import time
 from tabulate import tabulate
-
-
-# python dbseeker.py -a mysql-rfam-public.ebi.ac.uk -P 4497 -u rfamro -s test -d Rfam
-
-'''
-Version alpha 0.4
- Changelog:
-    - Inserted a padding limit for searching string to increase readability
-    - Added argument for better parsing
-    - Now user can blacklists databases to be excluded from research, OR 
-        choose which database to be searched in.
-        
-Version alpha 0.3
- Changelog:
-    - Cleaned string formatting for results
-    - Printed results now display PRIMARY KEYs
-        * Exexute ' python dbseeker.py -h ' to see the help message *
-        
-Version alpha 0.2
- Changelog:
-    - Whole script rewritten using functions
-    -
-
-'''
 import argparse
+import time
 
 
 SEARCH_PADDING_CHARS = 25
