@@ -2,7 +2,7 @@
 
 ## Description:
 
-A little but functional script that let you search in several databaes for an input string.
+A little but functional script that let you search in several databases for an input string.
 It will print the results in a table format, indicating wich table contains the search term, in wich database, how many rows were found and the time it took to search.
 
 Please note that this project is still in alpha stage, so you may encounter bugs and missing features.

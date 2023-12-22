@@ -8,7 +8,7 @@ setup(
     license='MIT',
     author='dueclic',
     author_email='info@dueclic.com',
-    description='A little but functional script that let you search in several databaes for an input string.',
+    description='A little but functional script that let you search in several databases for an input string.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown'
 )
