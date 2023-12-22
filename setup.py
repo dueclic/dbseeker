@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='dbseeker',
-    version='0.6a0',
+    version='0.7a0',
     install_requires=['mysql-connector-python', 'tabulate'],
     url='https://github.com/dueclic/dbseeker',
     license='MIT',

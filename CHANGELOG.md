@@ -1,5 +1,9 @@
 # CHANGELOG
 
+Alpha 0.7
+
+- Fix typos in README and setup.py
+
 Alpha 0.6
 
 - Added workflow for generate contributors avatar
