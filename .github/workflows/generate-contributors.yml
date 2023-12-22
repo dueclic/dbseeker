@@ -1,0 +1,15 @@
+name: Generate contributors
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Github Contributors Icon Generator
+      uses: jaywcjlove/github-action-contributors@v1.3.6
