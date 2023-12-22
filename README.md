@@ -54,9 +54,7 @@ as refered in the requirements.txt file.
 
 As always, thanks to our amazing contributors!
 
-<a href="https://github.com/dueclic/dbseeker/graphs/contributors">
-  <img src="https://dueclic.github.io/dbseeker/CONTRIBUTORS.svg" />
-</a>
+<!--GAMFC_DELIMITER-->will be replaced here<!--GAMFC_DELIMITER-END-->
 
 Made with [contributors](https://github.com/jaywcjlove/github-action-contributors).
 
