@@ -1,5 +1,8 @@
 # CHANGELOG
 
+Alpha 0.5
+
+- Fix typos in README
 
 Alpha 0.4
 
