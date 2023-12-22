@@ -54,7 +54,7 @@ as refered in the requirements.txt file.
 
 As always, thanks to our amazing contributors!
 
-<!--GAMFC_DELIMITER-->will be replaced here<!--GAMFC_DELIMITER-END-->
+<!--GAMFC-->Contributors<!--GAMFC-END-->
 
 Made with [contributors](https://github.com/jaywcjlove/github-action-contributors).
 
