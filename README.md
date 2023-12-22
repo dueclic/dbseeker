@@ -11,7 +11,7 @@ Please note that this project is still in alpha stage, so you may encounter bugs
 DBSeeker uses argparse to parse  command line arguments.
 You can run `python dbseeker.py -h` to see this help message:
 
-```bash
+```
 usage: dbseeker.py [-h] -a address -P port -u user [-p password] [-d database | -bl blacklist] -s search
 
 
