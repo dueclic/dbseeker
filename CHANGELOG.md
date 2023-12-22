@@ -1,5 +1,9 @@
 # CHANGELOG
 
+Alpha 0.6
+
+- Added workflow for generate contributors avatar
+
 Alpha 0.5
 
 - Fix typos in README
