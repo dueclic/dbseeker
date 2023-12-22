@@ -1,5 +1,6 @@
 # DBSeeker
 
+[![Built with Python3](https://img.shields.io/badge/built%20with-Python3-red.svg)](https://www.python.org/) [![PyPI version](https://badge.fury.io/py/dbseeker.svg)](https://badge.fury.io/py/dbseeker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dueclic/dbseeler/blob/master/LICENSE) ![Contributors](https://img.shields.io/github/contributors/dueclic/dbseeker)
 ## Description:
 
 A little but functional script that let you search in several databases for an input string.
@@ -49,9 +50,25 @@ Since 'argparse' and 'time' should be both included in your python environment y
 
 as refered in the requirements.txt file.
 
+## Contributors
+
+As always, thanks to our amazing contributors!
+
+<a href="https://github.com/dueclic/dbseeker/graphs/contributors">
+  <img src="https://dueclic.github.io/dbseeker/CONTRIBUTORS.svg" />
+</a>
+
+Made with [contributors](https://github.com/jaywcjlove/github-action-contributors).
+
 ## Installation:
 
 Inside the project folder, create a new virtual environment, then simply run
 ```bash
 pip install -r requirements.txt
+```
+
+Or you can simply run 
+
+```bash
+pip install dbseeker
 ```
